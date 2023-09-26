@@ -7,7 +7,7 @@ dotenv.config();
 const notion = new Client({ auth: process.env.NOTION_KEY });
 const app = express();
 const port = process.env.PORT || 3000;
-const databaseId = "69beb60018a04dc4a85f568bbd03dc94";
+const databaseId = process.env.NOTION_PROJET_DB_ID;
 app.use(express.json()).use(cors());
 
 // Endpoint pour récupérer des données depuis Notion
